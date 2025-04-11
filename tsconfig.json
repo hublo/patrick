@@ -2,24 +2,23 @@
   "compilerOptions": {
     "incremental": true,
     "target": "es2022",
-    "module": "Node16",
+    "module": "NodeNext",
     "declaration": true,
     "sourceMap": true,
     "outDir": "./lib",
-
     /* Strict Type-Checking Options */
     "strict": true,
-
     /* Additional Checks */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-
-    "moduleResolution": "Node16",
+    "moduleResolution": "nodenext",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
   },
-  "include": ["src/"],
+  "include": [
+    "src/"
+  ],
   "compileOnSave": false
 }

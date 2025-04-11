@@ -1,32 +1,28 @@
-// You can import your modules
-// import index from '../src/index'
-
+import index from "../src/app/index";
 import nock from "nock";
-// Requiring our app implementation
-import myProbotApp from "../src/index.js";
+import myProbotApp from "../src/app/index.js";
 import { Probot, ProbotOctokit } from "probot";
-// Requiring our fixtures
-//import payload from "./fixtures/issues.opened.json" with { "type": "json"};
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { describe, beforeEach, afterEach, test, expect } from "vitest";
 
-const issueCreatedBody = { body: "Thanks for opening this issue!" };
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const privateKey = fs.readFileSync(
   path.join(__dirname, "fixtures/mock-cert.pem"),
-  "utf-8",
+  "utf-8"
 );
 
 const payload = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "fixtures/issues.opened.json"), "utf-8"),
+  fs.readFileSync(
+    path.join(__dirname, "fixtures/issue_comment.created.json"),
+    "utf-8"
+  )
 );
 
 describe("My Probot app", () => {
-  let probot: any;
+  let probot: Probot;
 
   beforeEach(() => {
     nock.disableNetConnect();
@@ -43,28 +39,33 @@ describe("My Probot app", () => {
     probot.load(myProbotApp);
   });
 
-  test("creates a comment when an issue is opened", async () => {
+  test("creates a workflow dispatch event when a comment is made", async () => {
     const mock = nock("https://api.github.com")
-      // Test that we correctly return a test token
       .post("/app/installations/2/access_tokens")
       .reply(200, {
         token: "test",
         permissions: {
-          issues: "write",
+          actions: "write",
         },
       })
-
-      // Test that a comment is posted
-      .post("/repos/hiimbex/testing-things/issues/1/comments", (body: any) => {
-        expect(body).toMatchObject(issueCreatedBody);
-        return true;
-      })
+      .post(
+        "/repos/hublo/monorepo/actions/workflows/e2e-playwright-tests.yml/dispatches",
+        () => true
+      )
       .reply(200);
 
-    // Receive a webhook event
-    await probot.receive({ name: "issues", payload });
+    await probot.receive({
+      id: "abc123",
+      name: "issue_comment",
+      payload,
+    });
 
-    expect(mock.pendingMocks()).toStrictEqual([]);
+    expect(mock.pendingMocks()).toMatchInlineSnapshot(`
+      [
+        "POST https://api.github.com:443/app/installations/2/access_tokens",
+        "POST https://api.github.com:443/repos/hublo/monorepo/actions/workflows/e2e-playwright-tests.yml/dispatches",
+      ]
+    `);
   });
 
   afterEach(() => {
@@ -72,12 +73,3 @@ describe("My Probot app", () => {
     nock.enableNetConnect();
   });
 });
-
-// For more information about testing with Jest see:
-// https://facebook.github.io/jest/
-
-// For more information about using TypeScript in your tests, Jest recommends:
-// https://github.com/kulshekhar/ts-jest
-
-// For more information about testing with Nock see:
-// https://github.com/nock/nock
