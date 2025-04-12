@@ -1,4 +1,3 @@
-import index from "../src/app/index";
 import nock from "nock";
 import myProbotApp from "../src/app/index.js";
 import { Probot, ProbotOctokit } from "probot";

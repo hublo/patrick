@@ -1,11 +1,11 @@
 {
-  "name": "slash-e2e",
+  "name": "patrick",
   "version": "1.0.0",
   "private": true,
   "description": "A Probot app to trigger e2e test from a PR",
   "author": "VivianHublo",
   "license": "ISC",
-  "homepage": "https://github.com//",
+  "homepage": "https://github.com/hublo/",
   "keywords": [
     "probot",
     "github",
@@ -19,11 +19,18 @@
   },
   "dependencies": {
     "@probot/adapter-aws-lambda-serverless": "^4.0.3",
-    "probot": "^13.0.1"
+    "probot": "^13.4.5"
   },
   "devDependencies": {
+    "@pulumi/aws": "^6.76.0",
+    "@pulumi/awsx": "^2.21.1",
+    "@pulumi/pulumi": "^3.162.0",
     "@types/node": "^20.0.0",
+    "classic": "link:@pulumi/awsx/classic",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
     "nock": "^14.0.0-beta.5",
+    "prettier": "^3.5.3",
     "smee-client": "^2.0.0",
     "typescript": "^5.3.3",
     "vitest": "^3.1.1"
