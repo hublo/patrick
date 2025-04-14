@@ -1,4 +1,4 @@
-const ALLOWED_ENVS = ["ng", "env1", "env2", "env3", "env4", "env5", "env6"];
+const ALLOWED_ENVS = ["ng", "dev", "env1", "env2", "env3", "env4", "env5", "env6"];
 const ALLOWED_FRONTS = ["", "front-hr-management"];
 
 export function parser(context: { payload: { comment: { body: string } } }) {
