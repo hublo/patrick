@@ -1,4 +1,4 @@
-FROM node:18-slim as builder
+FROM node:20-slim as builder
 WORKDIR /usr/src/app
 RUN npm --silent install --global --depth 0 pnpm
 COPY pnpm-lock.yaml  .
@@ -8,7 +8,7 @@ RUN pnpm i --offline --frozen-lockfile
 COPY . .
 RUN pnpm build
 
-FROM amazon/aws-lambda-nodejs:18
+FROM amazon/aws-lambda-nodejs:20
 ARG APP_ID
 ENV APP_ID $APP_ID
 ARG PRIVATE_KEY
