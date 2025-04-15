@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { parser } from '../src/app/parser.js'
+import { parser, ensureValidInput } from '../src/app/parser.js'
 
-describe('slash-e2e parser', () => {
+describe('parser', () => {
   it('should return nothing if no "/e2e" command', () => {
     const body = 'hello world'
     const result = parser({ payload: { comment: { body } } })
@@ -41,5 +41,22 @@ describe('slash-e2e parser', () => {
     const body = '/e2e daniel balavoine'
     const result = parser({ payload: { comment: { body } } })
     expect(result).toEqual(undefined)
+  })
+})
+
+describe('ensureValidInput', () => {
+  it('should throw an error if the input is not in the list', () => {
+    const list = ['a', 'b', 'c']
+    const el = 'd'
+    expect(() => ensureValidInput(list, el)).toThrow(
+      `Invalid input: ${el}. Supported values are: ${list.join(', ')}`,
+    )
+  })
+
+  it('should return the input if it is in the list', () => {
+    const list = ['a', 'b', 'c']
+    const el = 'b'
+    const result = ensureValidInput(list, el)
+    expect(result).toBe(el)
   })
 })
