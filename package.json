@@ -15,7 +15,8 @@
     "dev": "tsc --watch & probot run ./lib/app/index.js",
     "build": "tsc",
     "start": "probot run ./lib/index.js",
-    "test": "vitest"
+    "test": "vitest",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@probot/adapter-aws-lambda-serverless": "^4.0.3",
