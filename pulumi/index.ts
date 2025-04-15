@@ -49,14 +49,14 @@ const lambda = new aws.lambda.Function('patrick-bot', {
   timeout: 10,
   environment: {
     variables: {
-      DD_LAMBDA_HANDLER: 'src/index.webhooks',
-      DD_SITE: 'datadoghq.eu',
-      DD_SERVICE: 'patrick-bot',
-      DD_ENV: 'prod',
-      DD_API_KEY_SECRET_ARN:
-        'arn:aws:secretsmanager:eu-central-1:637206260787:secret:datadog-lambdas-api-key-UMo5E4',
-      DD_LOGS_CONFIG_PROCESSING_RULES:
-        '[{"type": "exclude_at_match", "name": "exclude_start_and_end_logs", "pattern": "(START|END) RequestId"}]',
+      // DD_LAMBDA_HANDLER: 'src/index.webhooks',
+      // DD_SITE: 'datadoghq.eu',
+      // DD_SERVICE: 'patrick-bot',
+      // DD_ENV: 'prod',
+      // DD_API_KEY_SECRET_ARN:
+      //   'arn:aws:secretsmanager:eu-central-1:637206260787:secret:datadog-lambdas-api-key-UMo5E4',
+      // DD_LOGS_CONFIG_PROCESSING_RULES:
+      //   '[{"type": "exclude_at_match", "name": "exclude_start_and_end_logs", "pattern": "(START|END) RequestId"}]',
     },
   },
 })
