@@ -17,7 +17,7 @@ ARG WEBHOOK_SECRET
 ENV WEBHOOK_SECRET $WEBHOOK_SECRET
 ARG LOG_LEVEL
 ENV LOG_LEVEL $LOG_LEVEL
-COPY --from=public.ecr.aws/datadog/lambda-extension:latest /opt/extensions/ /opt/extensions
+# COPY --from=public.ecr.aws/datadog/lambda-extension:latest /opt/extensions/ /opt/extensions
 RUN npm --silent install --global --depth 0 pnpm
 COPY pnpm-lock.yaml  ${LAMBDA_TASK_ROOT}
 RUN pnpm fetch --prod

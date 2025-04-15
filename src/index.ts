@@ -1,10 +1,7 @@
-import {
-  createLambdaFunction,
-  createProbot,
-} from '@probot/adapter-aws-lambda-serverless'
-
+import pkg from '@probot/adapter-aws-lambda-serverless'
+const { createProbot, createLambdaFunction } = pkg
 import App from './app/index.js'
 
-export const webhook: any = createLambdaFunction(App, {
+export const webhooks: any = createLambdaFunction(App, {
   probot: createProbot(),
 })
