@@ -12,6 +12,7 @@ const image = repository.buildAndPushImage({
     APP_ID: config.requireSecret('APP_ID'),
     PRIVATE_KEY: config.requireSecret('PRIVATE_KEY'),
     WEBHOOK_SECRET: config.requireSecret('WEBHOOK_SECRET'),
+    LOG_LEVEL: config.get('LOG_LEVEL') || 'info',
   },
 })
 

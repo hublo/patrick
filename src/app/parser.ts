@@ -20,7 +20,7 @@ export function parser(context: { payload: { comment: { body: string } } }) {
 
   return {
     'front-matrix': validatedFrontends,
-    env: `https://${validatedEnvironment}.hubpreprod.com` as const,
+    baseUrl: `https://${validatedEnvironment}.hubpreprod.com/` as const,
   }
 }
 
