@@ -1,0 +1,43 @@
+name: deploy
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  provision-pulumi:
+    runs-on: runs-on,runner=2cpu-linux-x64,spot=co,run-id=${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        with:
+          driver-opts: 'image=moby/buildkit:master'
+
+      - uses: pnpm/action-setup@v2.2.4
+
+      - uses: actions/setup-node@v3.6.0
+        with:
+          node-version-file: '.node-version'
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+
+      - name: Configure AWS credentials 🛡️
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::637206260787:role/prd-validate-pr-ci
+          aws-region: eu-central-1
+
+      - name: Apply infrastructure 🏗️
+        uses: pulumi/actions@v6
+        with:
+          command: up
+          work-dir: ./pulumi
+          stack-name: patrick-bot.prod
+          cloud-url: s3://prd-pulumi-shared-resources
+          comment-on-summary: true
+          comment-on-pr: true

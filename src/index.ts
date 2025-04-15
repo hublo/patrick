@@ -1,17 +1,8 @@
-import { Probot } from "probot";
+import {
+  createLambdaFunction,
+  createProbot,
+} from '@probot/adapter-aws-lambda-serverless'
 
-export default (app: Probot) => {
-  app.on("issues.opened", async (context) => {
-    console.log(app);
-    const issueComment = context.issue({
-      body: "Thanks for opening this issue!",
-    });
-    await context.octokit.issues.createComment(issueComment);
-  });
+import App from './app/index.js'
 
-  // For more information on building apps:
-  // https://probot.github.io/docs/
-
-  // To get your app running against GitHub, see:
-  // https://probot.github.io/docs/development/
-};
+createLambdaFunction(App, { probot: createProbot() })

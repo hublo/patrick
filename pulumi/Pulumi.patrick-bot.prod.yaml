@@ -1,0 +1,9 @@
+secretsprovider: awskms://00eb2f29-92f5-420c-8062-93454fd4e1d5?region=eu-central-1
+encryptedkey: AQICAHgotP91Vnt97Zwj4p+w9SReIPwy5JB4i3480tysxRzUvwFQ62udaJFczBPp+MpMv4PcAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMmxoAP5KKmtiDcgDXAgEQgDuwOThmf/CcLbGOh3RWeW7iHTw7kM/l8NDB2iCCzYvuwf+v9NnP/AYmWfMBuDYi5lNBkrYNI5c9pWOnDg==
+config:
+  patrick:APP_ID:
+    secure: v1:KTs1i8rPZYJm945A:64Muf6k0SXo6tnawEXr5XIxTdP+Y8w==
+  patrick:PRIVATE_KEY:
+    secure: v1:vEN4Lcso5mQwqeH3:4TMUtnT13+WHs9sKRL3597seouZ9hc8=
+  patrick:WEBHOOK_SECRET:
+    secure: v1:bBOd3jKJq8r8l+XE:/h3eKmHe6KDLG9F4QKSjA/6EooXDByTvD5ADWxEzI6mzbvBAFhV0toXb+daXtLDYgA2RwDGOkv0=
