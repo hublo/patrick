@@ -5,4 +5,6 @@ import {
 
 import App from './app/index.js'
 
-createLambdaFunction(App, { probot: createProbot() })
+export const webhook: any = createLambdaFunction(App, {
+  probot: createProbot(),
+})
