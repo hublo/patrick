@@ -16,7 +16,7 @@ importers:
         version: 10.124.0
       dd-trace:
         specifier: ^5.48.0
-        version: 5.48.0
+        version: 5.48.1
       probot:
         specifier: ^13.4.5
         version: 13.4.5
@@ -217,8 +217,8 @@ packages:
   '@datadog/sketches-js@2.1.1':
     resolution: {integrity: sha512-d5RjycE+MObE/hU+8OM5Zp4VjTwiPLRa8299fj7muOmR16fb942z8byoMbCErnGh0lBevvgkGrLclQDvINbIyg==}
 
-  '@datadog/wasm-js-rewriter@4.0.0':
-    resolution: {integrity: sha512-atw1uocrNlG3Fi7usLG5irTpasoz519YTZUyAxp7ZCppDNA+iLHpK1NksV9E2uCGMzF6dGifGmDaui0nK12nYg==}
+  '@datadog/wasm-js-rewriter@4.0.1':
+    resolution: {integrity: sha512-JRa05Je6gw+9+3yZnm/BroQZrEfNwRYCxms56WCCHzOBnoPihQLB0fWy5coVJS29kneCUueUvBvxGp6NVXgdqw==}
     engines: {node: '>= 10'}
 
   '@esbuild/aix-ppc64@0.25.2':
@@ -1684,8 +1684,8 @@ packages:
     resolution: {integrity: sha512-F9+06papa9GOFUMjxGiqM1bS98pOkinZpBF3Sygb46owrXaHdR2uLkftE6nygrqNcAurdwKjLAtX+0GJkSwIFQ==}
     engines: {node: '>=12.17'}
 
-  dd-trace@5.48.0:
-    resolution: {integrity: sha512-H/pMcwQ8iM7WtJQPpDHq0u5NsXUNH7GKpMUFVjoUulxoSAH0tdlYmFPNkUgbgi2rfKzyXgTELXTznvnQJGgXYQ==}
+  dd-trace@5.48.1:
+    resolution: {integrity: sha512-peAfeyVbaWsVZ0FBMq5t3MN5pEgJQlWv7i+L6OoFgkYKh7LYrc0y/BgA8Aj96TL38xndCYK1/Y940Vv7/xHCwg==}
     engines: {node: '>=18'}
 
   debug@4.4.0:
@@ -2786,8 +2786,8 @@ packages:
     resolution: {integrity: sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==}
     engines: {node: '>= 8'}
 
-  protobufjs@7.4.0:
-    resolution: {integrity: sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==}
+  protobufjs@7.5.0:
+    resolution: {integrity: sha512-Z2E/kOY1QjoMlCytmexzYfDm/w5fKAiRwpSzGtdnXW1zC88Z2yXazHHrOtwCzn+7wSxyE8PYM4rvVcMphF9sOA==}
     engines: {node: '>=12.0.0'}
 
   proxy-addr@2.0.7:
@@ -3816,7 +3816,7 @@ snapshots:
 
   '@datadog/sketches-js@2.1.1': {}
 
-  '@datadog/wasm-js-rewriter@4.0.0':
+  '@datadog/wasm-js-rewriter@4.0.1':
     dependencies:
       js-yaml: 4.1.0
       lru-cache: 7.18.3
@@ -3955,7 +3955,7 @@ snapshots:
     dependencies:
       lodash.camelcase: 4.3.0
       long: 5.3.1
-      protobufjs: 7.4.0
+      protobufjs: 7.5.0
       yargs: 17.7.2
 
   '@humanfs/core@0.19.1': {}
@@ -5604,7 +5604,7 @@ snapshots:
 
   dc-polyfill@0.1.8: {}
 
-  dd-trace@5.48.0:
+  dd-trace@5.48.1:
     dependencies:
       '@datadog/libdatadog': 0.5.1
       '@datadog/native-appsec': 8.5.2
@@ -5612,7 +5612,7 @@ snapshots:
       '@datadog/native-metrics': 3.1.1
       '@datadog/pprof': 5.7.1
       '@datadog/sketches-js': 2.1.1
-      '@datadog/wasm-js-rewriter': 4.0.0
+      '@datadog/wasm-js-rewriter': 4.0.1
       '@isaacs/ttlcache': 1.4.1
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.8.0)
@@ -5630,7 +5630,7 @@ snapshots:
       opentracing: 0.14.7
       path-to-regexp: 0.1.12
       pprof-format: 2.1.0
-      protobufjs: 7.4.0
+      protobufjs: 7.5.0
       retry: 0.13.1
       rfdc: 1.4.1
       semifies: 1.0.0
@@ -6808,7 +6808,7 @@ snapshots:
 
   propagate@2.0.1: {}
 
-  protobufjs@7.4.0:
+  protobufjs@7.5.0:
     dependencies:
       '@protobufjs/aspromise': 1.1.2
       '@protobufjs/base64': 1.1.2
