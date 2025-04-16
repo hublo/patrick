@@ -8,7 +8,7 @@ RUN pnpm i --offline --frozen-lockfile
 COPY . .
 RUN pnpm build
 
-FROM amazon/aws-lambda-nodejs:20
+FROM amazon/aws-lambda-nodejs:22
 ARG APP_ID
 ENV APP_ID $APP_ID
 ARG PRIVATE_KEY
