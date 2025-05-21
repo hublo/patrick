@@ -1,4 +1,4 @@
-FROM node:20-slim as builder
+FROM node:22-slim as builder
 WORKDIR /usr/src/app
 RUN npm --silent install --global --depth 0 pnpm
 COPY pnpm-lock.yaml  .
