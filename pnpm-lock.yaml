@@ -29,7 +29,7 @@ importers:
         version: 2.21.1(typescript@5.8.3)
       '@pulumi/pulumi':
         specifier: ^3.162.0
-        version: 3.174.0(typescript@5.8.3)
+        version: 3.175.0(typescript@5.8.3)
       '@types/node':
         specifier: ^20.17.30
         version: 20.17.57
@@ -973,8 +973,8 @@ packages:
   '@pulumi/docker@4.6.2':
     resolution: {integrity: sha512-dMjkR8xkwmYT4mx8GvhQLY4EdmpN6QSDgADXhWaEo5hFxskWqzZUdi/eYlv5OMJPtm3m8V69Q3UOEQAPZPxbyw==}
 
-  '@pulumi/pulumi@3.174.0':
-    resolution: {integrity: sha512-NgkY96JE/0304nvOdktd4B2s3KVBxvV6AuSzTnjFxG52W/M8kk0MFEHR4oD2feM7TpO4XGMUwu5X980SrlG9UQ==}
+  '@pulumi/pulumi@3.175.0':
+    resolution: {integrity: sha512-15d34B01pkacNiMwX5pXKzo+jSls2UMQV9A754/Hudujml/zp1MDxEeTtgfRYX4r5WDppswoFvNK93RnbHCTWA==}
     engines: {node: '>=20'}
     peerDependencies:
       ts-node: '>= 7.0.1 < 12'
@@ -4720,7 +4720,7 @@ snapshots:
 
   '@pulumi/aws@6.82.1(typescript@5.8.3)':
     dependencies:
-      '@pulumi/pulumi': 3.174.0(typescript@5.8.3)
+      '@pulumi/pulumi': 3.175.0(typescript@5.8.3)
       mime: 2.6.0
     transitivePeerDependencies:
       - bluebird
@@ -4734,7 +4734,7 @@ snapshots:
       '@pulumi/aws': 6.82.1(typescript@5.8.3)
       '@pulumi/docker': 4.6.2(typescript@5.8.3)
       '@pulumi/docker-build': 0.0.8(typescript@5.8.3)
-      '@pulumi/pulumi': 3.174.0(typescript@5.8.3)
+      '@pulumi/pulumi': 3.175.0(typescript@5.8.3)
       '@types/aws-lambda': 8.10.149
       docker-classic: '@pulumi/docker@3.6.1(typescript@5.8.3)'
       mime: 2.6.0
@@ -4747,7 +4747,7 @@ snapshots:
 
   '@pulumi/docker-build@0.0.8(typescript@5.8.3)':
     dependencies:
-      '@pulumi/pulumi': 3.174.0(typescript@5.8.3)
+      '@pulumi/pulumi': 3.175.0(typescript@5.8.3)
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -4756,7 +4756,7 @@ snapshots:
 
   '@pulumi/docker@3.6.1(typescript@5.8.3)':
     dependencies:
-      '@pulumi/pulumi': 3.174.0(typescript@5.8.3)
+      '@pulumi/pulumi': 3.175.0(typescript@5.8.3)
       semver: 5.7.2
     transitivePeerDependencies:
       - bluebird
@@ -4766,7 +4766,7 @@ snapshots:
 
   '@pulumi/docker@4.6.2(typescript@5.8.3)':
     dependencies:
-      '@pulumi/pulumi': 3.174.0(typescript@5.8.3)
+      '@pulumi/pulumi': 3.175.0(typescript@5.8.3)
       semver: 5.7.2
     transitivePeerDependencies:
       - bluebird
@@ -4774,7 +4774,7 @@ snapshots:
       - ts-node
       - typescript
 
-  '@pulumi/pulumi@3.174.0(typescript@5.8.3)':
+  '@pulumi/pulumi@3.175.0(typescript@5.8.3)':
     dependencies:
       '@grpc/grpc-js': 1.13.4
       '@logdna/tail-file': 2.2.0
