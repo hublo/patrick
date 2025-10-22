@@ -22,8 +22,8 @@ importers:
         version: 13.4.5
     devDependencies:
       '@pulumi/aws':
-        specifier: ^6.76.0
-        version: 6.83.0(typescript@5.9.3)
+        specifier: ^7.0.0
+        version: 7.9.0(typescript@5.9.3)
       '@pulumi/awsx':
         specifier: ^2.21.1
         version: 2.22.0(typescript@5.9.3)
@@ -964,6 +964,9 @@ packages:
 
   '@pulumi/aws@6.83.0':
     resolution: {integrity: sha512-uYpYSA5aaDERFuxy3D+FDWiwH7YYNHSwGLpHVuARAzBfQ/SQDkS/tfJI5NNo7/+KCmje3rloKE2enUK/Q9bVBg==}
+
+  '@pulumi/aws@7.9.0':
+    resolution: {integrity: sha512-tQ3shCfGi+VbpfkViTHguOLA9XgZ13sdGzBMsHePbiG7LkpQTi0y6neBPp+9iWh5/bTZswtM5qqRFNBinWIDjA==}
 
   '@pulumi/awsx@2.22.0':
     resolution: {integrity: sha512-uajrWX6zkk8G9DCCkCkRaH2yzeGRkCElkC8FOE9viUtb9WyVt01EbNqJkje+QwYq4g055jWqcq2YRn7xT1Y44w==}
@@ -4762,6 +4765,16 @@ snapshots:
   '@protobufjs/utf8@1.1.0': {}
 
   '@pulumi/aws@6.83.0(typescript@5.9.3)':
+    dependencies:
+      '@pulumi/pulumi': 3.203.0(typescript@5.9.3)
+      mime: 2.6.0
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
+      - ts-node
+      - typescript
+
+  '@pulumi/aws@7.9.0(typescript@5.9.3)':
     dependencies:
       '@pulumi/pulumi': 3.203.0(typescript@5.9.3)
       mime: 2.6.0
