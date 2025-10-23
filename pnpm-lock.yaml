@@ -29,7 +29,7 @@ importers:
         version: 2.22.0(typescript@5.9.3)
       '@pulumi/pulumi':
         specifier: ^3.162.0
-        version: 3.203.0(typescript@5.9.3)
+        version: 3.204.0(typescript@5.9.3)
       '@types/node':
         specifier: ^20.17.30
         version: 20.19.23
@@ -977,8 +977,8 @@ packages:
   '@pulumi/docker@4.8.0':
     resolution: {integrity: sha512-R1jDAokbz71VbljF6TJ4yNA4Tp1Gd+ISgIQmrcsUf/gNCP1hoA7putyTIta5q0zzy83aPeeeySYwx54iOfHrvQ==}
 
-  '@pulumi/pulumi@3.203.0':
-    resolution: {integrity: sha512-wXGzxYC61DF+YtJYwidxrpvRxn2y3+ML5OUuAQWUzPgM0byEgKotHAhadQ9uvfutSE262mmoqv5skXaDJdBGzQ==}
+  '@pulumi/pulumi@3.204.0':
+    resolution: {integrity: sha512-B+FJTd0lJ1/6kl/OHsLzUc/QoNp+0VwOXbhlbCVYzlsPi6UTIdaio25oCOSTFuQEj0gKWkE9m0Rq1d4Pk5DErw==}
     engines: {node: '>=20'}
     peerDependencies:
       ts-node: '>= 7.0.1 < 12'
@@ -2909,8 +2909,8 @@ packages:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
 
-  resolve@1.22.10:
-    resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
+  resolve@1.22.11:
+    resolution: {integrity: sha512-RfqAvLnMl313r7c9oclB1HhUEAezcpLjz95wFH4LVuhk9JF/r22qmVP9AMmOU4vMX7Q8pN8jwNg/CSpdFnMjTQ==}
     engines: {node: '>= 0.4'}
     hasBin: true
 
@@ -4763,7 +4763,7 @@ snapshots:
 
   '@pulumi/aws@6.83.1(typescript@5.9.3)':
     dependencies:
-      '@pulumi/pulumi': 3.203.0(typescript@5.9.3)
+      '@pulumi/pulumi': 3.204.0(typescript@5.9.3)
       mime: 2.6.0
     transitivePeerDependencies:
       - bluebird
@@ -4777,7 +4777,7 @@ snapshots:
       '@pulumi/aws': 6.83.1(typescript@5.9.3)
       '@pulumi/docker': 4.8.0(typescript@5.9.3)
       '@pulumi/docker-build': 0.0.8(typescript@5.9.3)
-      '@pulumi/pulumi': 3.203.0(typescript@5.9.3)
+      '@pulumi/pulumi': 3.204.0(typescript@5.9.3)
       '@types/aws-lambda': 8.10.150
       docker-classic: '@pulumi/docker@3.6.1(typescript@5.9.3)'
       mime: 2.6.0
@@ -4790,7 +4790,7 @@ snapshots:
 
   '@pulumi/docker-build@0.0.8(typescript@5.9.3)':
     dependencies:
-      '@pulumi/pulumi': 3.203.0(typescript@5.9.3)
+      '@pulumi/pulumi': 3.204.0(typescript@5.9.3)
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -4799,7 +4799,7 @@ snapshots:
 
   '@pulumi/docker@3.6.1(typescript@5.9.3)':
     dependencies:
-      '@pulumi/pulumi': 3.203.0(typescript@5.9.3)
+      '@pulumi/pulumi': 3.204.0(typescript@5.9.3)
       semver: 5.7.2
     transitivePeerDependencies:
       - bluebird
@@ -4809,7 +4809,7 @@ snapshots:
 
   '@pulumi/docker@4.8.0(typescript@5.9.3)':
     dependencies:
-      '@pulumi/pulumi': 3.203.0(typescript@5.9.3)
+      '@pulumi/pulumi': 3.204.0(typescript@5.9.3)
       semver: 5.7.2
     transitivePeerDependencies:
       - bluebird
@@ -4817,7 +4817,7 @@ snapshots:
       - ts-node
       - typescript
 
-  '@pulumi/pulumi@3.203.0(typescript@5.9.3)':
+  '@pulumi/pulumi@3.204.0(typescript@5.9.3)':
     dependencies:
       '@grpc/grpc-js': 1.14.0
       '@logdna/tail-file': 2.2.0
@@ -7006,7 +7006,7 @@ snapshots:
     dependencies:
       debug: 4.4.3
       module-details-from-path: 1.0.4
-      resolve: 1.22.10
+      resolve: 1.22.11
     transitivePeerDependencies:
       - supports-color
 
@@ -7014,7 +7014,7 @@ snapshots:
 
   resolve-from@4.0.0: {}
 
-  resolve@1.22.10:
+  resolve@1.22.11:
     dependencies:
       is-core-module: 2.16.1
       path-parse: 1.0.7
